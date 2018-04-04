@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ThemeableBrowser, ThemeableBrowserOptions} from "@ionic-native/themeable-browser";
-import {Events, NavController} from "ionic-angular";
+import {LoadingController} from "ionic-angular";
 
 @Component({
   selector: 'page-home',
@@ -8,15 +8,24 @@ import {Events, NavController} from "ionic-angular";
 })
 export class HomePage {
 
-  constructor(private events: Events,
-              private nav: NavController,
+  loading:any;
+
+  constructor(private loadingCtrl: LoadingController,
               private themeableBrowser: ThemeableBrowser) {
   }
 
-  ionViewDidEnter() {
+  ionViewDidLoad() {
+    this.loading = this.loadingCtrl.create({
+      content: '加载中...'
+    });
+    this.loading.present();
+  }
+
+  ionViewDidEnter(){
     setTimeout(() => {
       this.run();
-    }, 1000);
+      this.loading.dismiss();
+    }, 2000);
   }
 
   f() {
