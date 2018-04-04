@@ -14,3 +14,29 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-header {
+  padding-top: $cordova-md-statusbar-padding !important;
+  background: rgba(39, 96, 230, 0.9) !important;
+  height: 70px !important;
+}
+
+.ion-page > ion-content {
+  position: absolute;
+  top: -70px;
+  height: calc(100% + 70px);
+}
+
+.hidden_head {
+  height: 70px;
+}
+
+.toolbar-background-ios, .toolbar-background-md {
+  background: transparent !important;
+  border: none !important;
+}
+
+.toolbar-title-ios, .toolbar-title-md {
+  text-align: center;
+  color: #fff;
+}

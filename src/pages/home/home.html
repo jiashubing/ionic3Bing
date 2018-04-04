@@ -1,17 +1,19 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+<ion-header style="background: transparent !important;">
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content style="height: 100%; top: 0; background: url('assets/imgs/home.png') no-repeat; background-size: 100% 100%;">
+  <div style="font-size: 30px; text-align: center; padding: 40px 0 60px; color: #fff;">欢迎</div>
+
+  <div style="text-align: center; margin: 20px 10%; height: 4.4rem; color: #fff;">
+    <p style="text-indent: 2em;">如果你正在读这段文字，那就说明APP出错了，或者是点了安卓自带的返回按钮。</p>
+    <p style="text-indent: 2em;">请点击下面的按钮跳转到正常访问页面！</p>
+  </div>
+
+  <div style="text-align: center; margin: 70px 18% 0;">
+    <button ion-button block round (click)="f()">
+      手动跳转
+    </button>
+  </div>
 </ion-content>
+
+
